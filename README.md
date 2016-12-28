@@ -14,4 +14,19 @@
 <br>
 یا حق
 </h3>
+<br>
+<br>
+<hr>
+<p>
+را به اینصورت ویرایش کنید bot.php فایل
+<br>
+chatid --> چت آی دی گروه خودتون
+<br>
+admin 1 userid --> یوزر آی دی مدیر 1
+<br>
+admin 2 userid --> یوزر آی دی مدیر 2
+<br>
+admin 3 userid --> یوزر آی دی مدیر 3
+</p>
+<hr>
 </center>
