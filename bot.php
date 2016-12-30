@@ -218,9 +218,9 @@ return $e;
 
 
 
-if($update->message->chat->id== chatid)
+if($update->message->chat->id== -1001080988148)
 {
-    if($update->message->from->id==admin 1 userid || $update->message->from->id==admin 2 userid || $update->message->from->id==admin 3 userid){
+    if($update->message->from->id==130029829 || $update->message->from->id==admin 2 userid || $update->message->from->id==admin 3 userid){
 		if (stripos($text, "#ارسال") !== false) {
 
 			 $text=str_replace("#ارسال","",$text);
@@ -229,7 +229,7 @@ if($update->message->chat->id== chatid)
             		'text'=>$text.'
 
 __________________________
-😉 وب سایت  <a href="http://developerland.ir">سرزمین برنامه نویسان</a>',
+تماس با سازنده <a href="https://telegram.me/site_sazi">@site_sazi</a>',
             		'parse_mode'=>'HTML',
             		'disable_web_page_preview'=>true
         		]);
@@ -470,7 +470,7 @@ Request('sendChatAction',[
 
 🔖در صورت رعایت نکردن موارد بالا , اخطار میگیرید و بعد از ۵ اخطار اخراج میشید🔖
 
-➿مدیریت سرزمین برنامه نویسان➿',
+➿مدیر گپ - powered by @site_sazi➿',
             			'parse_mode'=>'HTML',
             			'parse_mode'=>'HTML',
             			'reply_to_message_id'=>$update->message->message_id,
@@ -545,15 +545,9 @@ Request('sendChatAction',[
             'text'=>'سلام '.$update->message->chat->first_name.' عزیز 😍
 __________________________
 
-<a href="https://telegram.me/joinchat/Bqz6lD27TVVEYBZArIzpzA">⭕️ گروه سرزمین برنامه نویسان</a>
 
-<a href="https://telegram.me/developerland_ir">⭕️ کانال سرزمین برنامه نویسان</a>
-
-<a href="http://DeveloperLand.ir">⭕️ وب سایت سرزمین برنامه نویسان</a>
-
-<a href="http://Fgig.ir.ir">⭕️ هاست نامحدود ارزان</a>
 __________________________
-Coded With ❤️ by <a href="https://telegram.me/Smart_78">Smart</a> 😉',
+Coded With ❤️ by <a href="https://telegram.me/site_sazi">site_sazi</a> 😉',
             'parse_mode'=>'HTML',
             'disable_web_page_preview'=>true
         ]);
@@ -565,10 +559,7 @@ else{
             'text'=>$text.'
 
 __________________________
-😉 وب سایت  <a href="http://developerland.ir">سرزمین برنامه نویسان</a>
-😉 گروه <a href="https://telegram.me/joinchat/Bqz6lD27TVVEYBZArIzpzA">سرزمین برنامه نویسان</a>
-😉 کانال  <a href="https://telegram.me/developerland_ir">سرزمین برنامه نویسان</a>
-😉 هاست  <a href="http://fgig.ir">ارزان</a>',
+',
             'parse_mode'=>'HTML',
             'disable_web_page_preview'=>true
         ]);
