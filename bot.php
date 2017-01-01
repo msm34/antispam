@@ -1,6 +1,10 @@
 <?php
 ob_start();
 define('API_KEY','326704662:AAEeaA2qa2gB7YfEDymgQE2MKoAakadkzQE');
+define('group',-1001080988148);
+define('admin1',130029829);
+define('admin2',130029829);
+define('admin3',130029829);
 $update = json_decode(file_get_contents('php://input'));
 function Request($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -17,29 +21,35 @@ function Request($method,$datas=[]){
 }
 ///////////////
 function zekhtar($ui){
-	$oe1 = fopen("e1.txt", "r");
-	$e1 = fread($oe1, filesize("e1.txt"));
-	$e2 = fread($oe1, filesize("e2.txt"));
-	$e3 = fread($oe1, filesize("e3.txt"));
-	$e4 = fread($oe1, filesize("e4.txt"));
-	fclose($oe1);
-	$e1=str_replace("\n[".$ui."]","",$e1);
-	$e2=str_replace("\n[".$ui."]","",$e2);
-	$e3=str_replace("\n[".$ui."]","",$e3);
-	$e4=str_replace("\n[".$ui."]","",$e4);
-	$we1 = fopen("e1.txt", "w") or die("Unable to open file!");
-	$we2 = fopen("e2.txt", "w") or die("Unable to open file!");
-	$we3 = fopen("e3.txt", "w") or die("Unable to open file!");
-	$we4 = fopen("e4.txt", "w") or die("Unable to open file!");
-	fwrite($we1, $e1);
-	fwrite($we2, $e2);
-	fwrite($we3, $e3);
-	fwrite($we4, $e4);
-	fclose($we1);
-	fclose($we2);
-	fclose($we3);
-	fclose($we4);
-	return 0;
+    $oe1 = fopen("e1.txt", "r");
+    $oe2 = fopen("e2.txt", "r");
+    $oe3 = fopen("e3.txt", "r");
+    $oe4 = fopen("e4.txt", "r");
+    $e1 = fread($oe1, filesize("e1.txt"));
+    $e2 = fread($oe2, filesize("e2.txt"));
+    $e3 = fread($oe3, filesize("e3.txt"));
+    $e4 = fread($oe4, filesize("e4.txt"));
+    fclose($oe1);
+    fclose($oe2);
+    fclose($oe3);
+    fclose($oe4);
+    $e1=str_replace("\n[".$ui."]","",$e1);
+    $e2=str_replace("\n[".$ui."]","",$e2);
+    $e3=str_replace("\n[".$ui."]","",$e3);
+    $e4=str_replace("\n[".$ui."]","",$e4);
+    $we1 = fopen("e1.txt", "w") or die("Unable to open file!");
+    $we2 = fopen("e2.txt", "w") or die("Unable to open file!");
+    $we3 = fopen("e3.txt", "w") or die("Unable to open file!");
+    $we4 = fopen("e4.txt", "w") or die("Unable to open file!");
+    fwrite($we1, $e1);
+    fwrite($we2, $e2);
+    fwrite($we3, $e3);
+    fwrite($we4, $e4);
+    fclose($we1);
+    fclose($we2);
+    fclose($we3);
+    fclose($we4);
+    return 0;
 }
 //////////////
 function get_string_between($string, $start, $end){
@@ -52,160 +62,145 @@ function get_string_between($string, $start, $end){
 }
 //////////////////
 function sekhtar($ui){
-$oe1 = fopen("e1.txt", "r");
-$e1 = fread($oe1, filesize("e1.txt"));
-fclose($oe1);
-$filename = 'e1.txt';
-$searchfor = "[".$ui."]";
-$fh = fopen($filename, 'r');
-$olddata = fread($fh, filesize($filename));
-if(strpos($olddata, $searchfor)) {
-	
-	$oe2 = fopen("e2.txt", "r");
-	$e2 = fread($oe1, filesize("e2.txt"));
-	fclose($oe2);
-	
-	$filename = 'e2.txt';
-	$searchfor = "[".$ui."]";
-	$fh = fopen($filename, 'r');
-	$olddata = fread($fh, filesize($filename));
-	if(strpos($olddata, $searchfor)) {
-		////////////////
-		$oe3 = fopen("e3.txt", "r");
-		$e3 = fread($oe1, filesize("e3.txt"));
-		fclose($oe2);
-	
-		$filename = 'e3.txt';
-		$searchfor = "[".$ui."]";
-		$fh = fopen($filename, 'r');
-		$olddata = fread($fh, filesize($filename));
-		if(strpos($olddata, $searchfor)) {
-			/////////////
-			$oe4 = fopen("e4.txt", "r");
-			$e4 = fread($oe1, filesize("e4.txt"));
-			fclose($oe4);
-	
-			$filename = 'e4.txt';
-			$searchfor = "[".$ui."]";
-			$fh = fopen($filename, 'r');
-			$olddata = fread($fh, filesize($filename));
-			if(strpos($olddata, $searchfor)) {
-				$e=4;
-			}
-	
-			else{
-				$e=3;
-			}
-			////////////
-		}
-	
-		else{
-			$e=2;
-		}
-		///////////////
-	}
-	
-	else{
-		
-		$e=1;
-	}
-}
-else{
-	$e=0;
-}
-return $e;
+    $oe1 = fopen("e1.txt", "r");
+    $e1 = fread($oe1, filesize("e1.txt"));
+    fclose($oe1);
+    $filename = 'e1.txt';
+    $searchfor = "[".$ui."]";
+    $fh = fopen($filename, 'r');
+    $olddata = fread($fh, filesize($filename));
+    if(strpos($olddata, $searchfor)) {
+        $oe2 = fopen("e2.txt", "r");
+        $e2 = fread($oe2, filesize("e2.txt"));
+        fclose($oe2);
+        $filename = 'e2.txt';
+        $searchfor = "[".$ui."]";
+        $fh = fopen($filename, 'r');
+        $olddata = fread($fh, filesize($filename));
+        if(strpos($olddata, $searchfor)) {
+            ////////////////
+            $oe3 = fopen("e3.txt", "r");
+            $e3 = fread($oe3, filesize("e3.txt"));
+            fclose($oe2);
+            $filename = 'e3.txt';
+            $searchfor = "[".$ui."]";
+            $fh = fopen($filename, 'r');
+            $olddata = fread($fh, filesize($filename));
+            if(strpos($olddata, $searchfor)) {
+                /////////////
+                $oe4 = fopen("e4.txt", "r");
+                $e4 = fread($oe4, filesize("e4.txt"));
+                fclose($oe4);
+                $filename = 'e4.txt';
+                $searchfor = "[".$ui."]";
+                $fh = fopen($filename, 'r');
+                $olddata = fread($fh, filesize($filename));
+                if(strpos($olddata, $searchfor)) {
+                    $e=4;
+                }
+                else{
+                    $e=3;
+                }
+                ////////////
+            }
+            else{
+                $e=2;
+            }
+            ///////////////
+        }
+        else{
+            $e=1;
+        }
+    }
+    else{
+        $e=0;
+    }
+    return $e;
 }
 /////////////////
 function ekhtar($ui){
-$oe1 = fopen("e1.txt", "r");
-$e1 = fread($oe1, filesize("e1.txt"));
-fclose($oe1);
-$filename = 'e1.txt';
-$searchfor = "[".$ui."]";
-$fh = fopen($filename, 'r');
-$olddata = fread($fh, filesize($filename));
-if(strpos($olddata, $searchfor)) {
-	
-	$oe2 = fopen("e2.txt", "r");
-	$e2 = fread($oe1, filesize("e2.txt"));
-	fclose($oe2);
-	
-	$filename = 'e2.txt';
-	$searchfor = "[".$ui."]";
-	$fh = fopen($filename, 'r');
-	$olddata = fread($fh, filesize($filename));
-	if(strpos($olddata, $searchfor)) {
-		////////////////
-		$oe3 = fopen("e3.txt", "r");
-		$e3 = fread($oe1, filesize("e3.txt"));
-		fclose($oe2);
-	
-		$filename = 'e3.txt';
-		$searchfor = "[".$ui."]";
-		$fh = fopen($filename, 'r');
-		$olddata = fread($fh, filesize($filename));
-		if(strpos($olddata, $searchfor)) {
-			/////////////
-			$oe4 = fopen("e4.txt", "r");
-			$e4 = fread($oe1, filesize("e4.txt"));
-			fclose($oe4);
-	
-			$filename = 'e4.txt';
-			$searchfor = "[".$ui."]";
-			$fh = fopen($filename, 'r');
-			$olddata = fread($fh, filesize($filename));
-			if(strpos($olddata, $searchfor)) {
-				$e=5;
-			}
-	
-			else{
-				$we4 = fopen("e4.txt", "w") or die("Unable to open file!");
-				$t = $e4."\n[".$ui."]";
-				fwrite($we4, $t);
-				fclose($we4);
-				$e=4;
-			}
-			////////////
-		}
-	
-		else{
-			$we3 = fopen("e3.txt", "w") or die("Unable to open file!");
-			$t = $e3."\n[".$ui."]";
-			fwrite($we3, $t);
-			fclose($we3);
-			$e=3;
-		}
-		///////////////
-	}
-	
-	else{
-		$we2 = fopen("e2.txt", "w") or die("Unable to open file!");
-		$t = $e2."\n[".$ui."]";
-		fwrite($we2, $t);
-		fclose($we2);
-		$e=2;
-	}
-}
-else{
-	$we1 = fopen("e1.txt", "w") or die("Unable to open file!");
-	$t = $e1."\n[".$ui."]";
-	fwrite($we1, $t);
-	fclose($we1);
-	$e=1;
-}
-return $e;
+    $oe1 = fopen("e1.txt", "r");
+    $e1 = fread($oe1, filesize("e1.txt"));
+    fclose($oe1);
+    $filename = 'e1.txt';
+    $searchfor = "[".$ui."]";
+    $fh = fopen($filename, 'r');
+    $olddata = fread($fh, filesize($filename));
+    if(strpos($olddata, $searchfor)) {
+        $oe2 = fopen("e2.txt", "r");
+        $e2 = fread($oe2, filesize("e2.txt"));
+        fclose($oe2);
+        $filename = 'e2.txt';
+        $searchfor = "[".$ui."]";
+        $fh = fopen($filename, 'r');
+        $olddata = fread($fh, filesize($filename));
+        if(strpos($olddata, $searchfor)) {
+            ////////////////
+            $oe3 = fopen("e3.txt", "r");
+            $e3 = fread($oe3, filesize("e3.txt"));
+            fclose($oe2);
+            $filename = 'e3.txt';
+            $searchfor = "[".$ui."]";
+            $fh = fopen($filename, 'r');
+            $olddata = fread($fh, filesize($filename));
+            if(strpos($olddata, $searchfor)) {
+                /////////////
+                $oe4 = fopen("e4.txt", "r");
+                $e4 = fread($oe4, filesize("e4.txt"));
+                fclose($oe4);
+                $filename = 'e4.txt';
+                $searchfor = "[".$ui."]";
+                $fh = fopen($filename, 'r');
+                $olddata = fread($fh, filesize($filename));
+                if(strpos($olddata, $searchfor)) {
+                    $e=5;
+                }
+                else{
+                    $we4 = fopen("e4.txt", "w") or die("Unable to open file!");
+                    $t = $e4."\n[".$ui."]";
+                    fwrite($we4, $t);
+                    fclose($we4);
+                    $e=4;
+                }
+                ////////////
+            }
+            else{
+                $we3 = fopen("e3.txt", "w") or die("Unable to open file!");
+                $t = $e3."\n[".$ui."]";
+                fwrite($we3, $t);
+                fclose($we3);
+                $e=3;
+            }
+            ///////////////
+        }
+        else{
+            $we2 = fopen("e2.txt", "w") or die("Unable to open file!");
+            $t = $e2."\n[".$ui."]";
+            fwrite($we2, $t);
+            fclose($we2);
+            $e=2;
+        }
+    }
+    else{
+        $we1 = fopen("e1.txt", "w") or die("Unable to open file!");
+        $t = $e1."\n[".$ui."]";
+        fwrite($we1, $t);
+        fclose($we1);
+        $e=1;
+    }
+    return $e;
 }
     $text = $update->message->text;
-if($update->message->chat->id== -1001080988148)
+if($update->message->chat->id== group)
 {
-    if($update->message->from->id== 130029829 || $update->message->from->id==admin 2 userid || $update->message->from->id==admin 3 userid){
+    if($update->message->from->id== admin1 || $update->message->from->id==admin2 || $update->message->from->id==admin3){
 		if (stripos($text, "#ارسال") !== false) {
 			 $text=str_replace("#ارسال","",$text);
 			Request('sendMessage',[
             		'chat_id'=>$update->message->chat->id,
             		'text'=>$text.'
 __________________________
-😉 وب سایت  <a href="http://developerland.ir">سرزمین برنامه نویسان</a>',
+طراح  <a href="https://telegram.me/site_sazi">site_sazi</a>',
             		'parse_mode'=>'HTML',
             		'disable_web_page_preview'=>true
         		]);
@@ -467,12 +462,9 @@ Request('sendChatAction',[
             'chat_id'=>$update->message->chat->id,
             'text'=>'سلام '.$update->message->chat->first_name.' عزیز 😍
 __________________________
-<a href="https://telegram.me/joinchat/Bqz6lD27TVVEYBZArIzpzA">⭕️ گروه سرزمین برنامه نویسان</a>
-<a href="https://telegram.me/developerland_ir">⭕️ کانال سرزمین برنامه نویسان</a>
-<a href="http://DeveloperLand.ir">⭕️ وب سایت سرزمین برنامه نویسان</a>
-<a href="http://Fgig.ir.ir">⭕️ هاست نامحدود ارزان</a>
+<a href="https://telegram.me/site_sazi">طراحی ربات آنتی اسپم برای شما</a>
 __________________________
-Coded With ❤️ by <a href="https://telegram.me/Smart_78">Smart</a> 😉',
+Coded With ❤️ by <a href="https://telegram.me/site_sazi">site_sazi</a> 😉',
             'parse_mode'=>'HTML',
             'disable_web_page_preview'=>true
         ]);
@@ -483,10 +475,7 @@ else{
             'chat_id'=>$update->message->chat->id,
             'text'=>$text.'
 __________________________
-😉 وب سایت  <a href="http://developerland.ir">سرزمین برنامه نویسان</a>
-😉 گروه <a href="https://telegram.me/joinchat/Bqz6lD27TVVEYBZArIzpzA">سرزمین برنامه نویسان</a>
-😉 کانال  <a href="https://telegram.me/developerland_ir">سرزمین برنامه نویسان</a>
-😉 هاست  <a href="http://fgig.ir">ارزان</a>',
+😉 طراحی <a href="https://telegram.me/site_sazi">ارزان</a>',
             'parse_mode'=>'HTML',
             'disable_web_page_preview'=>true
         ]);
